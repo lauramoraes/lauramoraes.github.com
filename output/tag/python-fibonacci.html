@@ -1014,22 +1014,83 @@ h6:hover .anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [3]:</div>
+<div class="prompt input_prompt">In [1]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>
-<span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="k">import</span> <span class="n">interact</span>
-
-<span class="k">def</span> <span class="nf">show_fib</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
-    <span class="n">sequence</span> <span class="o">=</span> <span class="s2">""</span>
-    <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
-        <span class="n">sequence</span> <span class="o">+=</span> <span class="s2">"</span><span class="si">{0}</span><span class="s2"> "</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-        <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
-    <span class="k">return</span> <span class="n">sequence</span>
-
-
-<span class="n">interact</span><span class="p">(</span><span class="n">show_fib</span><span class="p">,</span> <span class="n">N</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="n">widgets</span><span class="o">.</span><span class="n">Widget</span><span class="o">.</span><span class="n">widget_types</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[1]:</div>
+<div class="output_text output_subarea output_execute_result">
+<pre>{'Jupyter.Accordion': ipywidgets.widgets.widget_selectioncontainer.Accordion,
+ 'Jupyter.BoundedFloatText': ipywidgets.widgets.widget_float.BoundedFloatText,
+ 'Jupyter.BoundedIntText': ipywidgets.widgets.widget_int.BoundedIntText,
+ 'Jupyter.Box': ipywidgets.widgets.widget_box.Box,
+ 'Jupyter.Button': ipywidgets.widgets.widget_button.Button,
+ 'Jupyter.Checkbox': ipywidgets.widgets.widget_bool.Checkbox,
+ 'Jupyter.ColorPicker': ipywidgets.widgets.widget_color.ColorPicker,
+ 'Jupyter.Controller': ipywidgets.widgets.widget_controller.Controller,
+ 'Jupyter.ControllerAxis': ipywidgets.widgets.widget_controller.Axis,
+ 'Jupyter.ControllerButton': ipywidgets.widgets.widget_controller.Button,
+ 'Jupyter.DatePicker': ipywidgets.widgets.widget_date.DatePicker,
+ 'Jupyter.Dropdown': ipywidgets.widgets.widget_selection.Dropdown,
+ 'Jupyter.FloatProgress': ipywidgets.widgets.widget_float.FloatProgress,
+ 'Jupyter.FloatRangeSlider': ipywidgets.widgets.widget_float.FloatRangeSlider,
+ 'Jupyter.FloatSlider': ipywidgets.widgets.widget_float.FloatSlider,
+ 'Jupyter.FloatText': ipywidgets.widgets.widget_float.FloatText,
+ 'Jupyter.HBox': ipywidgets.widgets.widget_box.HBox,
+ 'Jupyter.HTML': ipywidgets.widgets.widget_string.HTML,
+ 'Jupyter.Image': ipywidgets.widgets.widget_image.Image,
+ 'Jupyter.IntProgress': ipywidgets.widgets.widget_int.IntProgress,
+ 'Jupyter.IntRangeSlider': ipywidgets.widgets.widget_int.IntRangeSlider,
+ 'Jupyter.IntSlider': ipywidgets.widgets.widget_int.IntSlider,
+ 'Jupyter.IntText': ipywidgets.widgets.widget_int.IntText,
+ 'Jupyter.Label': ipywidgets.widgets.widget_string.Label,
+ 'Jupyter.PlaceProxy': ipywidgets.widgets.widget_box.PlaceProxy,
+ 'Jupyter.Play': ipywidgets.widgets.widget_int.Play,
+ 'Jupyter.Proxy': ipywidgets.widgets.widget_box.Proxy,
+ 'Jupyter.RadioButtons': ipywidgets.widgets.widget_selection.RadioButtons,
+ 'Jupyter.Select': ipywidgets.widgets.widget_selection.Select,
+ 'Jupyter.SelectMultiple': ipywidgets.widgets.widget_selection.SelectMultiple,
+ 'Jupyter.SelectionSlider': ipywidgets.widgets.widget_selection.SelectionSlider,
+ 'Jupyter.Tab': ipywidgets.widgets.widget_selectioncontainer.Tab,
+ 'Jupyter.Text': ipywidgets.widgets.widget_string.Text,
+ 'Jupyter.Textarea': ipywidgets.widgets.widget_string.Textarea,
+ 'Jupyter.ToggleButton': ipywidgets.widgets.widget_bool.ToggleButton,
+ 'Jupyter.ToggleButtons': ipywidgets.widgets.widget_selection.ToggleButtons,
+ 'Jupyter.VBox': ipywidgets.widgets.widget_box.VBox,
+ 'Jupyter.Valid': ipywidgets.widgets.widget_bool.Valid,
+ 'jupyter.DirectionalLink': ipywidgets.widgets.widget_link.DirectionalLink,
+ 'jupyter.Link': ipywidgets.widgets.widget_link.Link}</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [2]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">widgets</span><span class="o">.</span><span class="n">IntSlider</span><span class="p">(</span>
+    <span class="n">value</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span>
+    <span class="nb">min</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="nb">max</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">step</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s1">'Test:'</span><span class="p">,</span>
+    <span class="n">disabled</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">continuous_update</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">orientation</span><span class="o">=</span><span class="s1">'horizontal'</span><span class="p">,</span>
+    <span class="n">readout</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">readout_format</span><span class="o">=</span><span class="s1">'i'</span><span class="p">,</span>
+    <span class="n">slider_color</span><span class="o">=</span><span class="s1">'white'</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1038,13 +1099,33 @@ h6:hover .anchor-link {
 <div class="output">
 <div class="output_area">
 <div class="prompt"></div>
-<div class="output_text output_subarea ">
-<pre>'0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597 2584 4181 6765 10946 17711 28657 46368 75025 121393 196418 317811 514229 832040 1346269 2178309 3524578 5702887 9227465 14930352 24157817 39088169 63245986 102334155 165580141 267914296 433494437 701408733 1134903170 1836311903 2971215073 4807526976 7778742049 12586269025 20365011074 32951280099 53316291173 86267571272 139583862445 225851433717 365435296162 591286729879 956722026041 1548008755920 2504730781961 4052739537881 6557470319842 10610209857723 17167680177565 27777890035288 44945570212853 72723460248141 117669030460994 190392490709135 308061521170129 498454011879264 '</pre>
+<div id="62eded37-2501-4824-a407-9b8ff66a38ec"></div>
+<div class="output_subarea output_widget_view ">
+<script type="text/javascript">
+var element = $('#62eded37-2501-4824-a407-9b8ff66a38ec');
+</script>
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id": "c99a83024a4544e8a148815da405906d"}
+</script>
 </div>
 </div>
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<script type="application/vnd.jupyter.widget-state+json">
+{"state": {"2131dcabb46c48deacfa3e08ce16a07d": {"model_module": "jupyter-js-widgets", "model_module_version": "*", "model_name": "LayoutModel", "state": {}}, "c99a83024a4544e8a148815da405906d": {"model_module": "jupyter-js-widgets", "model_module_version": "*", "model_name": "IntSliderModel", "state": {"continuous_update": false, "description": "Test:", "layout": "IPY_MODEL_2131dcabb46c48deacfa3e08ce16a07d", "max": 10, "readout_format": "i", "slider_color": "white", "value": 7}}}, "version_major": 1, "version_minor": 0}
+</script>
 
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var mathjaxscript = document.createElement('script');
