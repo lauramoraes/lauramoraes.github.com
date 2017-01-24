@@ -20,9 +20,9 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="/first-post.html">First Post</a></h1>
+                    <h1 class="entry-title"><a href="/fibonacci.html">Fibonnaci</a></h1>
 <footer class="post-info">
-        <abbr class="published" title="2017-01-24T11:05:00-02:00">
+        <abbr class="published" title="2017-01-24T14:53:00-02:00">
                 Published: Ter 24 janeiro 2017
         </abbr>
 
@@ -30,7 +30,7 @@
                 By                         <a class="url fn" href="/author/laura-moraes.html">Laura Moraes</a>
         </address>
 <p>In <a href="/category/posts.html">posts</a>.</p>
-<p>tags: <a href="/tag/python-firsts.html">python firsts</a> </p>
+<p>tags: <a href="/tag/python-fibonacci.html">python fibonacci</a> </p>
 </footer><!-- /.post-info --><style type="text/css">/*!
 *
 * IPython notebook
@@ -1003,601 +1003,38 @@ h6:hover .anchor-link {
 
 .ansi-bold { font-weight: bold; }
 </style>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [1]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Testando-como-fica-o-Markdown-em-blog">Testando como fica o Markdown em blog<a class="anchor-link" href="#Testando-como-fica-o-Markdown-em-blog">¶</a></h3><ol>
-<li>Lista de coisa</li>
-<li>Continuando a lista</li>
-</ol>
+<h3 id="Blogging-slider">Blogging slider<a class="anchor-link" href="#Blogging-slider">¶</a></h3><p>Testing with interact</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [2]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">read_pickle</span><span class="p">(</span><span class="s1">'cities.p'</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>
+<span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="k">import</span> <span class="n">interact</span>
+
+<span class="k">def</span> <span class="nf">show_fib</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+    <span class="n">sequence</span> <span class="o">=</span> <span class="s2">""</span>
+    <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+        <span class="n">sequence</span> <span class="o">+=</span> <span class="s2">"</span><span class="si">{0}</span><span class="s2"> "</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+        <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+    <span class="k">return</span> <span class="n">sequence</span>
+
+
+<span class="n">interact</span><span class="p">(</span><span class="n">show_fib</span><span class="p">,</span> <span class="n">N</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [3]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt output_prompt">Out[3]:</div>
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th></th>
-<th>latitude</th>
-<th>longitude</th>
-<th>short_name</th>
-</tr>
-<tr>
-<th>city</th>
-<th>state</th>
-<th></th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>atlântida</th>
-<th>rio grande do sul</th>
-<td>-29.786145</td>
-<td>-50.032883</td>
-<td>RS</td>
-</tr>
-<tr>
-<th>santa cruz do sul</th>
-<th>rio grande do sul</th>
-<td>-29.719768</td>
-<td>-52.429929</td>
-<td>RS</td>
-</tr>
-<tr>
-<th>lajeado</th>
-<th>rio grande do sul</th>
-<td>-29.465454</td>
-<td>-51.967828</td>
-<td>RS</td>
-</tr>
-<tr>
-<th>eldorado do sul</th>
-<th>rio grande do sul</th>
-<td>-29.999293</td>
-<td>-51.310419</td>
-<td>RS</td>
-</tr>
-<tr>
-<th>alvorada</th>
-<th>rio grande do sul</th>
-<td>-29.997493</td>
-<td>-51.077729</td>
-<td>RS</td>
-</tr>
-<tr>
-<th>canoas</th>
-<th>rio grande do sul</th>
-<td>-29.918697</td>
-<td>-51.181030</td>
-<td>RS</td>
-</tr>
-<tr>
-<th>portão</th>
-<th>rio grande do sul</th>
-<td>-29.696259</td>
-<td>-51.230150</td>
-<td>RS</td>
-</tr>
-<tr>
-<th>novo hamburgo</th>
-<th>rio grande do sul</th>
-<td>-29.686326</td>
-<td>-51.128605</td>
-<td>RS</td>
-</tr>
-<tr>
-<th>dois irmãos</th>
-<th>rio grande do sul</th>
-<td>-29.584159</td>
-<td>-51.087619</td>
-<td>RS</td>
-</tr>
-<tr>
-<th>bento gonçalves</th>
-<th>rio grande do sul</th>
-<td>-29.167402</td>
-<td>-51.515560</td>
-<td>RS</td>
-</tr>
-<tr>
-<th>gravataí</th>
-<th>rio grande do sul</th>
-<td>-29.945519</td>
-<td>-50.990793</td>
-<td>RS</td>
-</tr>
-<tr>
-<th>sapiranga</th>
-<th>rio grande do sul</th>
-<td>-29.638554</td>
-<td>-51.003623</td>
-<td>RS</td>
-</tr>
-<tr>
-<th>taquara</th>
-<th>rio grande do sul</th>
-<td>-29.650513</td>
-<td>-50.781169</td>
-<td>RS</td>
-</tr>
-<tr>
-<th>canela</th>
-<th>rio grande do sul</th>
-<td>-29.357972</td>
-<td>-50.814867</td>
-<td>RS</td>
-</tr>
-<tr>
-<th>maquiné</th>
-<th>rio grande do sul</th>
-<td>-29.679137</td>
-<td>-50.203395</td>
-<td>RS</td>
-</tr>
-<tr>
-<th>xangri-lá</th>
-<th>rio grande do sul</th>
-<td>-29.805378</td>
-<td>-50.039081</td>
-<td>RS</td>
-</tr>
-<tr>
-<th>capão da canoa</th>
-<th>rio grande do sul</th>
-<td>-29.761467</td>
-<td>-50.020022</td>
-<td>RS</td>
-</tr>
-<tr>
-<th>nova prata</th>
-<th>rio grande do sul</th>
-<td>-28.783945</td>
-<td>-51.608996</td>
-<td>RS</td>
-</tr>
-<tr>
-<th>rebouças</th>
-<th>paraná</th>
-<td>-25.626393</td>
-<td>-50.681254</td>
-<td>PR</td>
-</tr>
-<tr>
-<th>criciúma</th>
-<th>santa catarina</th>
-<td>-28.673572</td>
-<td>-49.365940</td>
-<td>SC</td>
-</tr>
-<tr>
-<th>indaial</th>
-<th>santa catarina</th>
-<td>-26.906256</td>
-<td>-49.240140</td>
-<td>SC</td>
-</tr>
-<tr>
-<th>garopaba</th>
-<th>santa catarina</th>
-<td>-28.020896</td>
-<td>-48.612557</td>
-<td>SC</td>
-</tr>
-<tr>
-<th>palhoça</th>
-<th>santa catarina</th>
-<td>-27.647044</td>
-<td>-48.670288</td>
-<td>SC</td>
-</tr>
-<tr>
-<th>biguaçu</th>
-<th>santa catarina</th>
-<td>-27.494323</td>
-<td>-48.654489</td>
-<td>SC</td>
-</tr>
-<tr>
-<th>porto belo</th>
-<th>santa catarina</th>
-<td>-27.149466</td>
-<td>-48.602757</td>
-<td>SC</td>
-</tr>
-<tr>
-<th>bombinhas</th>
-<th>santa catarina</th>
-<td>-27.144255</td>
-<td>-48.521345</td>
-<td>SC</td>
-</tr>
-<tr>
-<th>blumenau</th>
-<th>santa catarina</th>
-<td>-26.916108</td>
-<td>-49.057631</td>
-<td>SC</td>
-</tr>
-<tr>
-<th>itajaí</th>
-<th>santa catarina</th>
-<td>-26.907426</td>
-<td>-48.657023</td>
-<td>SC</td>
-</tr>
-<tr>
-<th>são josé dos pinhais</th>
-<th>paraná</th>
-<td>-25.537702</td>
-<td>-49.200082</td>
-<td>PR</td>
-</tr>
-<tr>
-<th>curitiba</th>
-<th>paraná</th>
-<td>-25.432956</td>
-<td>-49.271848</td>
-<td>PR</td>
-</tr>
-<tr>
-<th>...</th>
-<th>...</th>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-</tr>
-<tr>
-<th>santana do maranhão</th>
-<th>maranhão</th>
-<td>-3.113068</td>
-<td>-42.400768</td>
-<td>MA</td>
-</tr>
-<tr>
-<th>paulino neves</th>
-<th>maranhão</th>
-<td>-2.718206</td>
-<td>-42.545424</td>
-<td>MA</td>
-</tr>
-<tr>
-<th>tutóia</th>
-<th>maranhão</th>
-<td>-2.763550</td>
-<td>-42.276847</td>
-<td>MA</td>
-</tr>
-<tr>
-<th>buriti dos lopes</th>
-<th>piauí</th>
-<td>-3.172721</td>
-<td>-41.869909</td>
-<td>PI</td>
-</tr>
-<tr>
-<th>domingos mourão</th>
-<th>piauí</th>
-<td>-4.253434</td>
-<td>-41.271881</td>
-<td>PI</td>
-</tr>
-<tr>
-<th>são joão da fronteira</th>
-<th>piauí</th>
-<td>-3.938597</td>
-<td>-41.256287</td>
-<td>PI</td>
-</tr>
-<tr>
-<th>frecheirinha</th>
-<th>ceará</th>
-<td>-3.760612</td>
-<td>-40.821405</td>
-<td>CE</td>
-</tr>
-<tr>
-<th>alcântaras</th>
-<th>ceará</th>
-<td>-3.586984</td>
-<td>-40.544638</td>
-<td>CE</td>
-</tr>
-<tr>
-<th>sobral</th>
-<th>ceará</th>
-<td>-3.688038</td>
-<td>-40.348668</td>
-<td>CE</td>
-</tr>
-<tr>
-<th>massapê</th>
-<th>ceará</th>
-<td>-3.523871</td>
-<td>-40.342135</td>
-<td>CE</td>
-</tr>
-<tr>
-<th>barroquinha</th>
-<th>ceará</th>
-<td>-3.009117</td>
-<td>-41.139482</td>
-<td>CE</td>
-</tr>
-<tr>
-<th>jijoca de jericoacoara</th>
-<th>ceará</th>
-<td>-2.899683</td>
-<td>-40.438735</td>
-<td>CE</td>
-</tr>
-<tr>
-<th>tejuçuoca</th>
-<th>ceará</th>
-<td>-3.989712</td>
-<td>-39.576826</td>
-<td>CE</td>
-</tr>
-<tr>
-<th>miraíma</th>
-<th>ceará</th>
-<td>-3.568600</td>
-<td>-39.970065</td>
-<td>CE</td>
-</tr>
-<tr>
-<th>amontada</th>
-<th>ceará</th>
-<td>-3.364878</td>
-<td>-39.828823</td>
-<td>CE</td>
-</tr>
-<tr>
-<th>irauçuba</th>
-<th>ceará</th>
-<td>-3.745419</td>
-<td>-39.792238</td>
-<td>CE</td>
-</tr>
-<tr>
-<th>itapagé</th>
-<th>ceará</th>
-<td>-3.685673</td>
-<td>-39.583533</td>
-<td>CE</td>
-</tr>
-<tr>
-<th>uruburetama</th>
-<th>ceará</th>
-<td>-3.623017</td>
-<td>-39.508178</td>
-<td>CE</td>
-</tr>
-<tr>
-<th>paramoti</th>
-<th>ceará</th>
-<td>-4.097432</td>
-<td>-39.239466</td>
-<td>CE</td>
-</tr>
-<tr>
-<th>capistrano</th>
-<th>ceará</th>
-<td>-4.459897</td>
-<td>-38.901829</td>
-<td>CE</td>
-</tr>
-<tr>
-<th>guaramiranga</th>
-<th>ceará</th>
-<td>-4.262051</td>
-<td>-38.940633</td>
-<td>CE</td>
-</tr>
-<tr>
-<th>morrinhos</th>
-<th>ceará</th>
-<td>-3.228831</td>
-<td>-40.124179</td>
-<td>CE</td>
-</tr>
-<tr>
-<th>aracoiaba</th>
-<th>ceará</th>
-<td>-4.370394</td>
-<td>-38.809441</td>
-<td>CE</td>
-</tr>
-<tr>
-<th>redenção</th>
-<th>ceará</th>
-<td>-4.222958</td>
-<td>-38.729571</td>
-<td>CE</td>
-</tr>
-<tr>
-<th>ocara</th>
-<th>ceará</th>
-<td>-4.485067</td>
-<td>-38.598538</td>
-<td>CE</td>
-</tr>
-<tr>
-<th>guaiúba</th>
-<th>ceará</th>
-<td>-4.040244</td>
-<td>-38.634435</td>
-<td>CE</td>
-</tr>
-<tr>
-<th>pacajus</th>
-<th>ceará</th>
-<td>-4.170541</td>
-<td>-38.467022</td>
-<td>CE</td>
-</tr>
-<tr>
-<th>maracanaú</th>
-<th>ceará</th>
-<td>-3.876964</td>
-<td>-38.624419</td>
-<td>CE</td>
-</tr>
-<tr>
-<th>armação de búzios</th>
-<th>rio de janeiro</th>
-<td>-22.772106</td>
-<td>-41.971550</td>
-<td>RJ</td>
-</tr>
-<tr>
-<th>águas de lindóia</th>
-<th>são paulo</th>
-<td>-22.474885</td>
-<td>-46.641314</td>
-<td>SP</td>
-</tr>
-</tbody>
-</table>
-<p>5568 rows × 3 columns</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [4]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">'rio de janeiro'</span><span class="p">,</span> <span class="s1">'rio de janeiro'</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt output_prompt">Out[4]:</div>
-<div class="output_text output_subarea output_execute_result">
-<pre>latitude     -22.8767
-longitude    -43.2279
-short_name         RJ
-Name: (rio de janeiro, rio de janeiro), dtype: object</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [20]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">list1</span> <span class="o">=</span> <span class="p">[{</span><span class="s1">'city'</span><span class="p">:</span> <span class="sa">u</span><span class="s1">'armação de búzios'</span><span class="p">,</span> <span class="s1">'state'</span><span class="p">:</span> <span class="sa">u</span><span class="s1">'rio de janeiro'</span><span class="p">,</span> <span class="s2">"latitude"</span><span class="p">:</span><span class="o">-</span><span class="mf">22.772106</span> <span class="p">,</span><span class="s1">'longitude'</span><span class="p">:</span><span class="o">-</span><span class="mf">41.9715504</span> <span class="p">,</span> <span class="s1">'short_name'</span><span class="p">:</span> <span class="sa">u</span><span class="s1">'RJ'</span><span class="p">},</span>
-         <span class="p">{</span><span class="s1">'city'</span><span class="p">:</span> <span class="sa">u</span><span class="s1">'águas de lindóia'</span><span class="p">,</span> <span class="s1">'state'</span><span class="p">:</span> <span class="sa">u</span><span class="s1">'são paulo'</span><span class="p">,</span> <span class="s2">"latitude"</span><span class="p">:</span><span class="o">-</span><span class="mf">22.4748845</span> <span class="p">,</span><span class="s1">'longitude'</span><span class="p">:</span><span class="o">-</span><span class="mf">46.6413143</span> <span class="p">,</span> <span class="s1">'short_name'</span><span class="p">:</span> <span class="sa">u</span><span class="s1">'SP'</span><span class="p">}]</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [24]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df2</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">list1</span><span class="p">,</span> <span class="n">orient</span><span class="o">=</span><span class="s1">'columns'</span><span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">([</span><span class="s1">'city'</span><span class="p">,</span> <span class="s1">'state'</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [29]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df3</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df</span><span class="p">,</span><span class="n">df2</span><span class="p">],</span> <span class="mi">0</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [31]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df3</span><span class="o">.</span><span class="n">to_pickle</span><span class="p">(</span><span class="s1">'cities.p'</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [5]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.core.display</span> <span class="k">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
-<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="s1">'<h1>Hello, world!</h1>'</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_html rendered_html output_subarea ">
-<h1>Hello, world!</h1>
-</div>
-</div>
-</div>
-</div>
-</div><center><iframe frameborder="0" height="500px" src="https://www.desmos.com/calculator/ob9evnsqys?embed" style="border: 1px solid #ccc" width="500px"></iframe></center>
 
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var mathjaxscript = document.createElement('script');
@@ -1628,6 +1065,87 @@ Name: (rio de janeiro, rio de janeiro), dtype: object</pre>
 </script>
                 </article>
             </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/ipython-widget.html" rel="bookmark"
+                           title="Permalink to Interaction with IPythonWidget">Interaction with IPythonWidget</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2017-01-24T14:53:00-02:00">
+                Published: Ter 24 janeiro 2017
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/laura-moraes.html">Laura Moraes</a>
+        </address>
+<p>In <a href="/category/posts.html">posts</a>.</p>
+<p>tags: <a href="/tag/python-ipython-widget.html">python ipython widget</a> </p>
+</footer><!-- /.post-info -->                
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Static-Interactive-Widgets-for-IPython-Notebooks">Static Interactive Widgets for IPython Notebooks<a class="anchor-link" href="#Static-Interactive-Widgets-for-IPython-Notebooks">¶</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><em>This notebook originally appeared as a</em>
+<a href="http://jakevdp.github.io/blog/2013/12/05/static-interactive-widgets/"><em>blog post</em></a>
+<em>by Jake Vanderplas on</em>
+<a href="http://jakevdp.github.io/"><em>Pythonic Perambulations</em></a>.
+<em>Content is BSD licensed</em></p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<!-- PELICAN_BEGIN_SUMMARY -->
+<p>The inspiration of my previous <a href="http://jakevdp.github.io/blog/2013/12/01/kernel-density-estimation/">kernel density estimation post</a> was a blog post by <a href="http://www.mglerner.com/blog/?p=28">Michael Lerner</a>, who used my <a href="http://jakevdp.github.io/blog/2013/05/19/a-javascript-viewer-for-matplotlib-animations/">JSAnimation</a> tools to do a nice interactive demo of the relationship between kernel density estimation and histograms.</p>
+                <a class="readmore" href="/ipython-widget.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/first-post.html" rel="bookmark"
+                           title="Permalink to First Post">First Post</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2017-01-24T11:05:00-02:00">
+                Published: Ter 24 janeiro 2017
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/laura-moraes.html">Laura Moraes</a>
+        </address>
+<p>In <a href="/category/posts.html">posts</a>.</p>
+<p>tags: <a href="/tag/python-firsts.html">python firsts</a> </p>
+</footer><!-- /.post-info -->                
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+                <a class="readmore" href="/first-post.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+                </ol><!-- /#posts-list -->
+                </section><!-- /#content -->
         <section id="extras" class="body">
                 <div class="blogroll">
                         <h2>blogroll</h2>
