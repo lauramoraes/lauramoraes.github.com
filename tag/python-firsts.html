@@ -1005,10 +1005,33 @@ h6:hover .anchor-link {
 </style>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
+<div class="prompt input_prompt">In [1]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Testando-como-fica-o-Markdown-em-blog">Testando como fica o Markdown em blog<a class="anchor-link" href="#Testando-como-fica-o-Markdown-em-blog">¶</a></h3><ol>
+<li>Lista de coisa</li>
+<li>Continuando a lista</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">In [2]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">read_pickle</span><span class="p">(</span><span class="s1">'cities.p'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1016,21 +1039,10 @@ h6:hover .anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [32]:</div>
+<div class="prompt input_prompt">In [3]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">read_pickle</span><span class="p">(</span><span class="s1">'cities.p'</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [33]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">df</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span>
 </pre></div>
 </div>
 </div>
@@ -1038,7 +1050,7 @@ h6:hover .anchor-link {
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[33]:</div>
+<div class="prompt output_prompt">Out[3]:</div>
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
 <table border="1" class="dataframe">
@@ -1497,10 +1509,10 @@ h6:hover .anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [15]:</div>
+<div class="prompt input_prompt">In [4]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">'rio de janeiro'</span><span class="p">,</span> <span class="s1">'rio de janeiro'</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">'rio de janeiro'</span><span class="p">,</span> <span class="s1">'rio de janeiro'</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -1508,11 +1520,11 @@ h6:hover .anchor-link {
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[15]:</div>
+<div class="prompt output_prompt">Out[4]:</div>
 <div class="output_text output_subarea output_execute_result">
-<pre>latitude     -22.87665
-longitude    -43.22788
-short_name          RJ
+<pre>latitude     -22.8767
+longitude    -43.2279
+short_name         RJ
 Name: (rio de janeiro, rio de janeiro), dtype: object</pre>
 </div>
 </div>
@@ -1524,7 +1536,7 @@ Name: (rio de janeiro, rio de janeiro), dtype: object</pre>
 <div class="prompt input_prompt">In [20]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">list1</span> <span class="o">=</span> <span class="p">[{</span><span class="s1">'city'</span><span class="p">:</span> <span class="sa">u</span><span class="s1">'armação de búzios'</span><span class="p">,</span> <span class="s1">'state'</span><span class="p">:</span> <span class="sa">u</span><span class="s1">'rio de janeiro'</span><span class="p">,</span> <span class="s2">"latitude"</span><span class="p">:</span><span class="o">-</span><span class="mf">22.772106</span> <span class="p">,</span><span class="s1">'longitude'</span><span class="p">:</span><span class="o">-</span><span class="mf">41.9715504</span> <span class="p">,</span> <span class="s1">'short_name'</span><span class="p">:</span> <span class="sa">u</span><span class="s1">'RJ'</span><span class="p">},</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">list1</span> <span class="o">=</span> <span class="p">[{</span><span class="s1">'city'</span><span class="p">:</span> <span class="sa">u</span><span class="s1">'armação de búzios'</span><span class="p">,</span> <span class="s1">'state'</span><span class="p">:</span> <span class="sa">u</span><span class="s1">'rio de janeiro'</span><span class="p">,</span> <span class="s2">"latitude"</span><span class="p">:</span><span class="o">-</span><span class="mf">22.772106</span> <span class="p">,</span><span class="s1">'longitude'</span><span class="p">:</span><span class="o">-</span><span class="mf">41.9715504</span> <span class="p">,</span> <span class="s1">'short_name'</span><span class="p">:</span> <span class="sa">u</span><span class="s1">'RJ'</span><span class="p">},</span>
          <span class="p">{</span><span class="s1">'city'</span><span class="p">:</span> <span class="sa">u</span><span class="s1">'águas de lindóia'</span><span class="p">,</span> <span class="s1">'state'</span><span class="p">:</span> <span class="sa">u</span><span class="s1">'são paulo'</span><span class="p">,</span> <span class="s2">"latitude"</span><span class="p">:</span><span class="o">-</span><span class="mf">22.4748845</span> <span class="p">,</span><span class="s1">'longitude'</span><span class="p">:</span><span class="o">-</span><span class="mf">46.6413143</span> <span class="p">,</span> <span class="s1">'short_name'</span><span class="p">:</span> <span class="sa">u</span><span class="s1">'SP'</span><span class="p">}]</span>
 </pre></div>
 </div>
@@ -1536,7 +1548,7 @@ Name: (rio de janeiro, rio de janeiro), dtype: object</pre>
 <div class="prompt input_prompt">In [24]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">df2</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">list1</span><span class="p">,</span> <span class="n">orient</span><span class="o">=</span><span class="s1">'columns'</span><span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">([</span><span class="s1">'city'</span><span class="p">,</span> <span class="s1">'state'</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df2</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">list1</span><span class="p">,</span> <span class="n">orient</span><span class="o">=</span><span class="s1">'columns'</span><span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">([</span><span class="s1">'city'</span><span class="p">,</span> <span class="s1">'state'</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -1547,7 +1559,7 @@ Name: (rio de janeiro, rio de janeiro), dtype: object</pre>
 <div class="prompt input_prompt">In [29]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">df3</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df</span><span class="p">,</span><span class="n">df2</span><span class="p">],</span> <span class="mi">0</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df3</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df</span><span class="p">,</span><span class="n">df2</span><span class="p">],</span> <span class="mi">0</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1558,12 +1570,34 @@ Name: (rio de janeiro, rio de janeiro), dtype: object</pre>
 <div class="prompt input_prompt">In [31]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">df3</span><span class="o">.</span><span class="n">to_pickle</span><span class="p">(</span><span class="s1">'cities.p'</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df3</span><span class="o">.</span><span class="n">to_pickle</span><span class="p">(</span><span class="s1">'cities.p'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [5]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.core.display</span> <span class="k">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="s1">'<h1>Hello, world!</h1>'</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_html rendered_html output_subarea ">
+<h1>Hello, world!</h1>
+</div>
+</div>
+</div>
+</div>
+</div><center><iframe frameborder="0" height="500px" src="https://www.desmos.com/calculator/ob9evnsqys?embed" style="border: 1px solid #ccc" width="500px"></iframe></center>
 
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var mathjaxscript = document.createElement('script');
